@@ -36,6 +36,15 @@ tr:nth-child(even) {
     </STYLE>
 </head>
 <body>
+    <div class="container">
+        <h1>Преобразовать строку ARINC</h1>
+        <input type="text" id="input-string" placeholder="Введите строку ARINC...">
+        <button onclick="convertString()">Преобразовать</button>
+        <button onclick="clearInput()">Очистить</button>
+        <table id="result-table"></table>
+        <p id="message"></p> <!-- Блок для вывода сообщения -->
+    </div>
+    <script src="Scripts/string_to_table.js"></script>
     <div>
         <span class="titles">S - Standard (suitable for universal application)</span>
         <div>
@@ -194,7 +203,7 @@ tr:nth-child(even) {
                                 </tr>
                                 <tr>
                                     <td>52-55</td>
-                                    <td>DME Ident</td>
+                                    <td>DME Identifier</td>
                                     <td><a href="References/5_38_DME_Ident.png" target="_blank">5.38</a></td>
                                 </tr>
                                 <tr>
@@ -1648,15 +1657,5 @@ tr:nth-child(even) {
     <div><span class="titles">T -Tailored (included on the master tape for a single user’s specific purpose)</span></div>
         <div><span class="first">1 - T - Tailored</span></div>
         <div><span class="first">2-4 Airlines for whom tailored records are provided in the master file</span></div>
-
-    <div class="container">
-        <h1>Преобразовать строку ARINC</h1>
-        <input type="text" id="input-string" placeholder="Введите строку ARINC...">
-        <button onclick="convertString()">Преобразовать</button>
-        <button onclick="clearInput()">Очистить</button>
-        <table id="result-table"></table>
-        <p id="message"></p> <!-- Блок для вывода сообщения -->
-    </div>
-    <script src="Scripts/string_to_table.js"></script>
 </body>
 </html>
