@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <STYLE>
+.titles {
+font-size: 1em;
+font-weight: bold;
+color: #000000;
+}
+
+.first {
+font-size: 1em;
+color: #000000;
+}
+
+* {
+    line-height: 1.8;
+}
+
+table, caption {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+    </STYLE>
+</head>
+<body>
+    <div>
+        <span class="titles">S - Standard (suitable for universal application)</span>
+        <div>
+            <div><span class="first">1 - S - Standard</span></div>
+            <div><span class="first">2-4 Geographical Area </span><a href="References/Figure_5_2_Geographical_Area_Codes.png" target="_blank">(World Codes)</a></div>
+            <div><span class="first">5 - Section Code (SEC CODE)</span></div>
+
+                <details>
+                    <summary>5 - A - MORA</summary>
+                        <ul>
+                        <details>
+                            <summary>6 - S - Grid MORA (AS)</summary>
+                            <table>
+                                <caption><a href="Tables/AS_Grid_MORA.png" target="_blank">Grid MORA Primary Records</a></caption>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Field Name</th>
+                                    <th>Reference</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Record Type</td>
+                                    <td><a href="References/5_2_Record_Type.png" target="_blank">5.2</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2-4</td>
+                                    <td>Blank (Spacing)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Section Code</td>
+                                    <td><a href="References/5_4_Section_Code.png" target="_blank">5.4</a></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Subsection Code</td>
+                                    <td><a href="References/5_5_Subsection_Code.png" target="_blank">5.5</a></td>
+                                </tr>
+                                <tr>
+                                    <td>7-13</td>
+                                    <td>Blank (Spacing)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>14-16</td>
+                                    <td>Starting Latitude</td>
+                                    <td><a href="References/5_141_Starting_Latitude.png" target="_blank">5.141</a></td>
+                                </tr>
+                                <tr>
+                                    <td>17-20</td>
+                                    <td>Starting Longitude</td>
+                                    <td><a href="References/5_142_Starting_Longitude.png" target="_blank">5.142</a></td>
+                                </tr>
+                                <tr>
+                                    <td>21-30</td>
+                                    <td>Blank (Spacing)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>31-33...118-120</td>
+                                    <td>MORAs</td>
+                                    <td><a href="References/5_143_MORA.png" target="_blank">5.143</a></td>
+                                </tr>
+                            </table>
+                        </details>
+                        </ul>
+                </details>
+
+                <details>
+                    <summary>5 - D - Navaid</summary>
+                        <ul>
+                        <details>
+                            <summary>6 - Blank - VHF NAVAID (D)</summary>
+                            <table>
+								<caption><a href="Tables/D__VHF_NAVAID.png" target="_blank">VHF NAVAID Primary Records</a></caption>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Field Name</th>
+                                    <th>Reference</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Record Type</td>
+                                    <td><a href="References/5_2_Record_Type.png" target="_blank">5.2</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2-4</td>
+                                    <td>Customer/Area Code</td>
+                                    <td><a href="References/5_3_Customer_Area_Code.png" target="_blank">5.3</a></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Section Code</td>
+                                    <td><a href="References/5_4_Section_Code.png" target="_blank">5.4</a></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Subsection Code</td>
+                                    <td><a href="References/5_5_Subsection_Code.png" target="_blank">5.5</a></td>
+                                </tr>
+								<tr>
+                                    <td>7-10</td>
+                                    <td>Airport ICAO Identifier</td>
+                                    <td><a href="References/5_6_Airport_Heliport_Identifier.png" target="_blank">5.6</a></td>
+                                </tr>
+                                <tr>
+                                    <td>11-12</td>
+                                    <td>ICAO Code</td>
+                                    <td><a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a></td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>Blank (Spacing)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>14-17</td>
+                                    <td>VOR Identifier</td>
+                                    <td><a href="References/5_33_VOR_NDB_Identifier.png" target="_blank">5.33</a></td>
+                                </tr>
+                                <tr>
+                                    <td>18-19</td>
+                                    <td>Blank (Spacing)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>20-21</td>
+                                    <td>ICAO Code</td>
+                                    <td><a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a></td>
+                                </tr>
+                            </table>
+                        </details>
+                            <details>
+                            <summary>6 - B - NDB Navaid (DB)</summary>
+                            <img src="Tables/DB_NDB_NAVAID.png" alt="DB_NDB_NAVAID">
+                        </details>
+                        </ul>
+                </details>
+
+                <details>
+                    <summary>5 - E - Enroute</summary>
+                    <ul>
+                        <details>
+                            <summary>6 - A - Waypoints (EA)</summary>
+                            <img src="Tables/EA_Waypoints.png" alt="EA_Waypoints">
+                        </details>
+                        <details>
+                            <summary>6 - M - Airway Markers (EM)</summary>
+                            <img src="Tables/EM_Airways.png" alt="EM_Airways">
+                        </details>
+                        <details>
+                            <summary>6 - P - Holding Patterns (EP)</summary>
+                            <img src="Tables/EP_Holding_Patterns.png" alt="EP_Holding_Patterns">
+                        </details>
+                        <details>
+                            <summary>6 - R - Airways and Routes (ER)</summary>
+                            <img src="Tables/ER_Enroute_Airways.png" alt="ER_Enroute_Airways">
+                        </details>
+                        <details>
+                            <summary>6 - T - Preferred Routes (ET)</summary>
+                            <img src="Tables/ET_Preferred_Routes.png" alt="ET_Preferred_Routes">
+                        </details>
+                        <details>
+                            <summary>6 - U - Airway Restrictions (EU)</summary>
+                            <img src="Tables/EU_Airway_Restrictions.png" alt="EU_Airway_Restrictions">
+                        </details>
+                        <details>
+                            <summary>6 - V - Communications (EV)</summary>
+                            <img src="Tables/EV_Communications.png" alt="EV_Communications">
+                        </details>
+                    </ul>
+                </details>
+                <details>
+                    <summary>5 - H - Heliport</summary>
+                    <ul>
+                        <li>6 - Blank</li>
+                        <li>7-10 - Region Code or Airport ICAO Identifier</li>
+                        <li>11-12 - ICAO Code</li>
+                        <li>13 - Subsection Code</li>
+                        <details>
+                            <summary>13 - A - Heliports (HA)</summary>
+                            <img src="Tables/HA_Heliports.png" alt="HA_Heliports">
+                        </details>
+                        <details>
+                            <summary>13 - C - Terminal Waypoints (HC)</summary>
+                            <img src="Tables/HC_Heliport_waypoints.png" alt="HC_Heliport_waypoints">
+                        </details>
+                        <details>
+                            <summary>13 - D - SIDs (HD)</summary>
+                            <img src="Tables/HD_HE_HF_Heliport_SSAs.png" alt="HD_HE_HF_Heliport_SSAs">
+                        </details>
+                        <details>
+                            <summary>13 - E - STARs (HE)</summary>
+                            <img src="Tables/HD_HE_HF_Heliport_SSAs.png" alt="HD_HE_HF_Heliport_SSAs">
+                        </details>
+                        <details>
+                            <summary>13 - F - Approach Procedures (HF)</summary>
+                            <img src="Tables/HD_HE_HF_Heliport_SSAs.png" alt="HD_HE_HF_Heliport_SSAs">
+                        </details>
+                        <details>
+                            <summary>13 - S - MSA (HS)</summary>
+                            <img src="Tables/HS_Heliport_MSAs.png" alt="HS_Heliport_MSAs">
+                        </details>
+                        <details>
+                            <summary>13 - V - Communications (HV)</summary>
+                            <img src="Tables/HV_Heliport_Communications.png" alt="HV_Heliport_Communications">
+                        </details>
+                    </ul>
+                </details>
+                <details>
+                    <summary>5 - P - Airport</summary>
+                    <ul>
+                        <li>6 - Blank</li>
+                        <li>7-10 - Region Code or Airport ICAO Identifier</li>
+                        <li>11-12 - ICAO Code</li>
+                        <li>13 - Subsection Code</li>
+                        <details>
+                            <summary>13 - A - Airport Records (PA)</summary>
+                            <img src="Tables/PA_Airports.png" alt="PA_Airports">
+                        </details>
+                        <details>
+                            <summary>13 - B - Gates (PB)</summary>
+                            <img src="Tables/PB_Gates.png" alt="PB_Gates">
+                        </details>
+                        <details>
+                            <summary>13 - C - Terminal Waypoints (PC)</summary>
+                            <img src="Tables/PC_Waypoints.png" alt="PC_Waypoints">
+                        </details>
+                        <details>
+                            <summary>13 - D - SIDs (PD)</summary>
+                            <img src="Tables/PD_PE_PF_Airport_SSAs.png" alt="PD_PE_PF_Airport_SSAs">
+                        </details>
+                        <details>
+                            <summary>13 - E - STARs (PE)</summary>
+                            <img src="Tables/PD_PE_PF_Airport_SSAs.png" alt="PD_PE_PF_Airport_SSAs">
+                        </details>
+                        <details>
+                            <summary>13 - F - Approach Procedures (PF)</summary>
+                            <img src="Tables/PD_PE_PF_Airport_SSAs.png" alt="PD_PE_PF_Airport_SSAs">
+                        </details>
+                        <details>
+                            <summary>13 - G - Runways (PG)</summary>
+                            <img src="Tables/PG_Runways.png" alt="PG_Runways">
+                        </details>
+                        <details>
+                            <summary>13 - I - Localizer/Glide Slope (PI)</summary>
+                            <img src="Tables/PI_Localizer_Glide.png" alt="PI_Localizer_Glide">
+                        </details>
+                        <details>
+                            <summary>13 - L - MLS (PL)</summary>
+                            <img src="Tables/PL_Airport_MLS.png" alt="PL_Airport_MLS">
+                        </details>
+                        <details>
+                            <summary>13 - M - Localizer Marker (PM)</summary>
+                            <img src="Tables/PM_Localizer.png" alt="PM_Localizer">
+                        </details>
+                        <details>
+                            <summary>13 - P - Pathpoint (PP)</summary>
+                            <img src="Tables/PP_Paths_Points.png" alt="PP_Paths_Points">
+                        </details>
+                        <details>
+                            <summary>13 - R - Flight Planning ARR/DEP (PR)</summary>
+                            <img src="Tables/PR_Flight_Planning.png" alt="PR_Flight_Planning">
+                        </details>
+                        <details>
+                            <summary>13 - S - MSA (PS)</summary>
+                            <img src="Tables/PS_Airport_MSA.png" alt="PS_Airport_MSA">
+                        </details>
+                        <details>
+                            <summary>13 - T - MSA (PT)</summary>
+                            <img src="Tables/PT_GLS.png" alt="PT_GLS">
+                        </details>
+                        <details>
+                            <summary>13 - V - Communications (PV)</summary>
+                            <img src="Tables/PV_Communications.png" alt="PV_Communications">
+                        </details>
+                    </ul>
+                </details>
+                <details>
+                    <summary>5 - R - Company Routes</summary>
+                        <ul>
+                        <details>
+                            <summary>6 - Blank - Company Routes (R)</summary>
+                            <img src="Tables/R__Company_Routes.png" alt="R__Company_Routes">
+                        </details>
+                            <details>
+                            <summary>6 - A - Alternate Records (RA)</summary>
+                            <img src="Tables/RA_Alternate_Records.png" alt="RA_Alternate_Records">
+                        </details>
+                        </ul>
+                </details>
+                <details>
+                    <summary>5 - T - Tables</summary>
+                        <ul>
+                        <details>
+                            <summary>6 - C - Cruising Tables (TC)</summary>
+                            <img src="Tables/TC_Cruising_Tables.png" alt="TC_Cruising_Tables">
+                        </details>
+                            <details>
+                            <summary>6 - G - Geographical Reference (TG)</summary>
+                            <img src="Tables/TG_Geographical_Ref_Tables.png" alt="TG_Geographical_Ref_Tables">
+                        </details>
+                        </ul>
+                </details>
+                <details>
+                    <summary>5 - U - Airspace</summary>
+                        <ul>
+                        <details>
+                            <summary>6 - C - Controlled Airspace (UC)</summary>
+                            <img src="Tables/UC_Controlled_Airspace.png" alt="UC_Controlled_Airspace">
+                        </details>
+                            <details>
+                            <summary>6 - F - FIR/UIR (UF)</summary>
+                            <img src="Tables/TG_Geographical_Ref_Tables.png" alt="TG_Geographical_Ref_Tables">
+                        </details>
+                        <details>
+                            <summary>6 - R - Restrictive Airspace (UR)</summary>
+                            <img src="Tables/TG_Geographical_Ref_Tables.png" alt="TG_Geographical_Ref_Tables">
+                        </details>
+                        </ul>
+                </details>
+
+            </details>
+        </div>
+    </div>
+
+
+    <div><span class="titles">T -Tailored (included on the master tape for a single user’s specific purpose)</span></div>
+        <div><span class="first">1 - T - Tailored</span></div>
+        <div><span class="first">2-4 Airlines for whom tailored records are provided in the master file</span></div>
+</body>
+</html>
