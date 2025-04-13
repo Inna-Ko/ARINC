@@ -252,6 +252,62 @@ function checkCharacters(input) {
                             break;
                         case 'T':
                             messages.push('<b>T:</b> Preferred Routes (ET) [6] (<a href="Tables/ET_Preferred_Routes.png" target="_blank">Preferred Route Primary Records</a>)')
+                            if (input.length >= 23) {
+                                messages.push("<b>" + input.substring(13,23) + ':</b> Route Identifier [14-23] (<a href="References/5_8_Route_Identifier.png" target="_blank">5.8</a>)')}
+                            if (input.length >= 25) {
+                                messages.push("<b>" + input.substring(23,25) + ':</b> Preferred Route Use Indicator [24-25] (<a href="References/5_220_Pref_Route_Use_Indicator.png" target="_blank">5.220</a>)')}
+                            if (input.length >= 29) {
+                                messages.push("<b>" + input.substring(25,29) + ':</b> Sequence Number [26-29] (<a href="References/5_12_Sequence_Number.png" target="_blank">5.12</a>)')}
+                            if (input.length >= 44) {
+                                messages.push("<b>" + input.substring(39,44) + ':</b> To Fix Identifier [40-44] (<a href="References/5_83_To_Fix.png" target="_blank">5.83</a>)')}
+                            if (input.length >= 46) {
+                                messages.push("<b>" + input.substring(44,46) + ':</b> ICAO Code [45-46] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                            if (input.length >= 47) {
+                                messages.push("<b>" + input[46] + ':</b> Section Code [47] (<a href="References/5_4_Section_Code.png" target="_blank">5.4</a>)')}
+                            if (input.length >= 48) {
+                                messages.push("<b>" + input[47] + ':</b> Subsection Code [48] (<a href="References/5_5_Subsection_Code.png" target="_blank">5.5</a>)')}
+                            if (input.length >= 51) {
+                                messages.push("<b>" + input.substring(48,51) + ':</b> Subsection Code [49-51] (<a href="References/5_77_VIA_Code.png" target="_blank">5.77</a>)')}
+                            if (input.length >= 57) {
+                                messages.push("<b>" + input.substring(51,57) + ':</b> SID/STAR/App/AWY Identifier [52-57] (<a href="References/5_78_SID_STAR_App_AWY.png" target="_blank">5.78</a>)')}
+                            if (input.length >= 60) {
+                                messages.push("<b>" + input.substring(57,60) + ':</b> Area Code [58-60] (<a href="References/5_3_Customer_Area_Code.png" target="_blank">5.3</a>)')}
+                            if (input.length >= 61) {
+                                messages.push("<b>" + input[60] + ':</b> Level [61] (<a href="References/5_19_Level.png" target="_blank">5.19</a>)')}
+                            if (input.length >= 62) {
+                                messages.push("<b>" + input[61] + ':</b> Route Type [62] (<a href="References/5_7_Route_Type.png" target="_blank">5.7</a>)')}
+                            if (input.length >= 67) {
+                                messages.push("<b>" + input.substring(62,67) + ':</b> Initial Airport / Fix [63-67] (<a href="References/5_194_Init_Term_Airport_Fix.png" target="_blank">5.194</a>)')}
+                            if (input.length >= 69) {
+                                messages.push("<b>" + input.substring(67,69) + ':</b> ICAO Code [68-69] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                            if (input.length >= 70) {
+                                messages.push("<b>" + input[69] + ':</b> Section Code [70] (<a href="References/5_4_Section_Code.png" target="_blank">5.4</a>)')}
+                            if (input.length >= 71) {
+                                messages.push("<b>" + input[70] + ':</b> Subsection Code [71] (<a href="References/5_5_Subsection_Code.png" target="_blank">5.5</a>)')}
+                            if (input.length >= 76) {
+                                messages.push("<b>" + input.substring(71,76) + ':</b> Terminus Airport / Fix [72-76] (<a href="References/5_194_Init_Term_Airport_Fix.png" target="_blank">5.194</a>)')}
+                            if (input.length >= 78) {
+                                messages.push("<b>" + input.substring(76,78) + ':</b> ICAO Code [77-78] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                            if (input.length >= 79) {
+                                messages.push("<b>" + input[78] + ':</b> Section Code [79] (<a href="References/5_4_Section_Code.png" target="_blank">5.4</a>)')}
+                            if (input.length >= 80) {
+                                messages.push("<b>" + input[79] + ':</b> Subsection Code [80] (<a href="References/5_5_Subsection_Code.png" target="_blank">5.5</a>)')}
+                            if (input.length >= 85) {
+                                messages.push("<b>" + input.substring(80,85) + ':</b> Minimum Altitude [81-85] (<a href="References/5_30_Altitude_Minimum.png" target="_blank">5.30</a>)')}
+                            if (input.length >= 90) {
+                                messages.push("<b>" + input.substring(85,90) + ':</b> Maximum Altitude [86-90] (<a href="References/5_127_Maximum_Altitude.png" target="_blank">5.127</a>)')}
+                            if (input.length >= 91) {
+                                messages.push("<b>" + input[90] + ':</b> Time Code [91] (<a href="References/5_131_Time_Code.png" target="_blank">5.131</a>)')}
+                            if (input.length >= 93) {
+                                messages.push("<b>" + input.substring(91,93) + ':</b> Aircraft Use Group [92-93] (<a href="References/5_221_Aircraft_Use_Group.png" target="_blank">5.221</a>)')}
+                            if (input.length >= 94) {
+                                messages.push("<b>" + input[93] + ':</b> Direction Restriction [94] (<a href="References/5_115_Directional_Restriction.png" target="_blank">5.115</a>)')}
+                            if (input.length >= 95) {
+                                messages.push("<b>" + input[94] + ':</b> Altitude Description [95] (<a href="References/5_29_Altitude_Description.png" target="_blank">5.29</a>)')}
+                            if (input.length >= 100) {
+                                messages.push("<b>" + input.substring(95,100) + ':</b> Altitude One [96-100] (<a href="References/5_30_Altitude_Minimum.png" target="_blank">5.30</a>)')}
+                            if (input.length >= 105) {
+                                messages.push("<b>" + input.substring(100,105) + ':</b> Altitude One [101-105] (<a href="References/5_30_Altitude_Minimum.png" target="_blank">5.30</a>)')}
                             break;
                         case 'U':
                             messages.push('<b>U:</b> Airway Restrictions (EU) [6] (<a href="Tables/EU_Airway_Restrictions.png" target="_blank">Altitude Exclusion Primary Records</a>)')
