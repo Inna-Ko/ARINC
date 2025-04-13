@@ -380,6 +380,54 @@ function checkCharacters(input) {
                             break;
                         case 'V':
                             messages.push('<b>V:</b> Communications (EV) [6] (<a href="Tables/EV_Communications.png" target="_blank">Enroute Communications Primary Records</a>)')
+                            if (input.length >= 10) {
+                                messages.push("<b>" + input.substring(6,10) + ':</b> FIR/RDO Identifier [7-10] (<a href="References/5_190_FIR_RDO_Identifier.png" target="_blank">5.190</a>)')}
+                            if (input.length >= 14) {
+                                messages.push("<b>" + input.substring(6,10) + ':</b> FIR/UIR Address [11-14] (<a href="References/5_151_FIR_UIR_Address.png" target="_blank">5.151</a>)')}
+                            if (input.length >= 15) {
+                                messages.push("<b>" + input[14] + ':</b> FIR/UIR Indicator [15] (<a href="References/5_117_FIR_UIR_Indicator.png" target="_blank">5.203</a>)')}
+                            if (input.length >= 43) {
+                                messages.push("<b>" + input.substring(18,43) + ':</b> Remote Name [19-43] (<a href="References/5_189_Remote_Site_Name.png" target="_blank">5.189</a>)')}
+                            if (input.length >= 46) {
+                                messages.push("<b>" + input.substring(43,46) + ':</b> Communications Type [44-46] (<a href="References/5_101_Communications_Type.png" target="_blank">5.101</a>)')}
+                            if (input.length >= 53) {
+                                messages.push("<b>" + input.substring(46,53) + ':</b> Communications Frequency [47-53] (<a href="References/5_103_Communications_Frequency.png" target="_blank">5.103</a>)')}
+                            if (input.length >= 54) {
+                                messages.push("<b>" + input[53] + ':</b> Guard/Transmit [54] (<a href="References/5_182_Guard_Transmit.png" target="_blank">5.182</a>)')}
+                            if (input.length >= 55) {
+                                messages.push("<b>" + input[54] + ':</b> Frequency Units [55] (<a href="References/5_104_Frequency_Units.png" target="_blank">5.104</a>)')}
+                            if (input.length >= 59) {
+                                messages.push("<b>" + input.substring(56,59) + ':</b> Service Indicator [57-59] (<a href="References/5_106_Service_Indicator.png" target="_blank">5.106</a>)')}
+                            if (input.length >= 60) {
+                                messages.push("<b>" + input[59] + ':</b> Radar Service [60] (<a href="References/5_102_Radar_Service.png" target="_blank">5.102</a>)')}
+                            if (input.length >= 61) {
+                                messages.push("<b>" + input[60] + ':</b> Modulation [61] (<a href="References/5_198_Modulation.png" target="_blank">5.198</a>)')}
+                            if (input.length >= 62) {
+                                messages.push("<b>" + input[61] + ':</b> Signal Emission [62] (<a href="References/5_199_Signal_Emission.png" target="_blank">5.199</a>)')}
+                            if (input.length >= 71) {
+                                messages.push("<b>" + input.substring(62,71) + ':</b> Latitude [63-71] (<a href="References/5_36_Latitude.png" target="_blank">5.36</a>)')}
+                            if (input.length >= 81) {
+                                messages.push("<b>" + input.substring(71,81) + ':</b> Longitude [72-81] (<a href="References/5_37_Longitude.png" target="_blank">5.37</a>)')}
+                            if (input.length >= 86) {
+                                messages.push("<b>" + input.substring(81,86) + ':</b> Magnetic Variation [82-86] (<a href="References/5_39_Magnetic_Variation.png" target="_blank">5.39</a>)')}
+                            if (input.length >= 91) {
+                                messages.push("<b>" + input.substring(86,91) + ':</b> Facility Elevation [87-91] (<a href="References/5_92_Facility_Elevation.png" target="_blank">5.92</a>)')}
+                            if (input.length >= 92) {
+                                messages.push("<b>" + input[91] + ':</b> H24 Indicator [92] (<a href="References/5_181_H24_Indicator.png" target="_blank">5.181</a>)')}
+                            if (input.length >= 93) {
+                                messages.push("<b>" + input[92] + ':</b> Altitude Description [93] (<a href="References/5_29_Altitude_Description.png" target="_blank">5.29</a>)')}
+                            if (input.length >= 98) {
+                                messages.push("<b>" + input.substring(93,98) + ':</b> Communication Altitude [94-98] (<a href="References/5_184_Communication_Altitude.png" target="_blank">5.184</a>)')}
+                            if (input.length >= 103) {
+                                messages.push("<b>" + input.substring(98,103) + ':</b> Communication Altitude [99-103] (<a href="References/5_184_Communication_Altitude.png" target="_blank">5.184</a>)')}
+                            if (input.length >= 107) {
+                                messages.push("<b>" + input.substring(103,107) + ':</b> Remote Facility [104-107] (<a href="References/5_200_Remote_facility.png" target="_blank">5.200</a>)')}
+                            if (input.length >= 109) {
+                                messages.push("<b>" + input.substring(107,109) + ':</b> ICAO Code [108-109] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                            if (input.length >= 110) {
+                                messages.push("<b>" + input[109] + ':</b> Section Code [110] (<a href="References/5_4_Section_Code.png" target="_blank">5.4</a>)')}
+                            if (input.length >= 111) {
+                                messages.push("<b>" + input[110] + ':</b> Subsection Code [111] (<a href="References/5_5_Subsection_Code.png" target="_blank">5.5</a>)')}
                             break;
                         default:
                             messages.push("6 - ???")
