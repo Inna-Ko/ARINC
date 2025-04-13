@@ -311,6 +311,72 @@ function checkCharacters(input) {
                             break;
                         case 'U':
                             messages.push('<b>U:</b> Airway Restrictions (EU) [6] (<a href="Tables/EU_Airway_Restrictions.png" target="_blank">Altitude Exclusion Primary Records</a>)')
+                            if (input.length >= 11) {
+                                messages.push("<b>" + input.substring(6,11) + ':</b> Route Identifier [7-11] (<a href="References/5_8_Route_Identifier.png" target="_blank">5.8</a>)')}
+                            if (input.length >= 15) {
+                                messages.push("<b>" + input.substring(12,15) + ':</b> Restriction Identifier [13-15] (<a href="References/5_154_Restriction_Identifier.png" target="_blank">5.154</a>)')}
+                            if (input.length >= 17) {
+                                messages.push("<b>" + input.substring(15,17) + ':</b> Restriction Type [16-17] (<a href="References/5_201_Restriction_Type.png" target="_blank">5.201</a>)')}
+                            if (input.length >= 23) {
+                                messages.push("<b>" + input.substring(18,23) + ':</b> Start Fix Identifier [19-23] (<a href="References/5_13_Fix_Identifier.png" target="_blank">5.13</a>)')}
+                            if (input.length >= 25) {
+                                messages.push("<b>" + input.substring(23,25) + ':</b> Start Fix ICAO Code [24-25] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                             if (input.length >= 26) {
+                                messages.push("<b>" + input[25] + ':</b> Start Fix Section Code [26] (<a href="References/5_4_Section_Code.png" target="_blank">5.4</a>)')}
+                            if (input.length >= 27) {
+                                messages.push("<b>" + input[26] + ':</b> Start Fix Subsection Code [27] (<a href="References/5_5_Subsection_Code.png" target="_blank">5.5</a>)')}
+                            if (input.length >= 32) {
+                                messages.push("<b>" + input.substring(27,32) + ':</b> End Fix Identifier [28-32] (<a href="References/5_13_Fix_Identifier.png" target="_blank">5.13</a>)')}
+                            if (input.length >= 34) {
+                                messages.push("<b>" + input.substring(32,34) + ':</b> End Fix ICAO Code [33-34] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                            if (input.length >= 35) {
+                                messages.push("<b>" + input[34] + ':</b> End Fix Section Code [35] (<a href="References/5_4_Section_Code.png" target="_blank">5.4</a>)')}
+                            if (input.length >= 36) {
+                                messages.push("<b>" + input[36] + ':</b> End Fix Subsection Code [36] (<a href="References/5_5_Subsection_Code.png" target="_blank">5.5</a>)')}
+                            if (input.length >= 44) {
+                                messages.push("<b>" + input.substring(37,44) + ':</b> Start Date [38-44] (<a href="References/5_157_Restriction_Start_End_Date.png" target="_blank">5.157</a>)')}
+                            if (input.length >= 51) {
+                                messages.push("<b>" + input.substring(44,51) + ':</b> Start Date [45-51] (<a href="References/5_157_Restriction_Start_End_Date.png" target="_blank">5.157</a>)')}
+                            if (input.length >= 52) {
+                                messages.push("<b>" + input[51] + ':</b> Time Code [52] (<a href="References/5_131_Time_Code.png" target="_blank">5.131</a>)')}
+                            if (input.length >= 53) {
+                                messages.push("<b>" + input[52] + ':</b> Time Indicator [53] (<a href="References/5_138_Time_Indicator.png" target="_blank">5.138</a>)')}
+                            if (input.length >= 63) {
+                                messages.push("<b>" + input.substring(53,63) + ':</b> Time of Operation [54-63] (<a href="References/5_195_Time_of_Operation.png" target="_blank">5.195</a>)')}
+                            if (input.length >= 73) {
+                                messages.push("<b>" + input.substring(63,73) + ':</b> Time of Operation [64-73] (<a href="References/5_195_Time_of_Operation.png" target="_blank">5.195</a>)')}
+                            if (input.length >= 83) {
+                                messages.push("<b>" + input.substring(73,83) + ':</b> Time of Operation [74-83] (<a href="References/5_195_Time_of_Operation.png" target="_blank">5.195</a>)')}
+                            if (input.length >= 93) {
+                                messages.push("<b>" + input.substring(83,93) + ':</b> Time of Operation [84-93] (<a href="References/5_195_Time_of_Operation.png" target="_blank">5.195</a>)')}
+                            if (input.length >= 94) {
+                                messages.push("<b>" + input[93] + ':</b> Exclusion Indicator [94] (<a href="References/5_202_Exclusion_Indicator.png" target="_blank">5.202</a>)')}
+                            if (input.length >= 95) {
+                                messages.push("<b>" + input[94] + ':</b> Units of Altitude [95] (<a href="References/5_160_Units_of_Altitude.png" target="_blank">5.160</a>)')}
+                            if (input.length >= 98) {
+                                messages.push("<b>" + input.substring(95,98) + ':</b> Restriction Altitude [96-98] (<a href="References/5_161_Restriction_Altitude.png" target="_blank">5.161</a>)')}
+                            if (input.length >= 99) {
+                                messages.push("<b>" + input[98] + ':</b> Block Indicator [99] (<a href="References/5_203_Block_Indicator.png" target="_blank">5.203</a>)')}
+                            if (input.length >= 102) {
+                                messages.push("<b>" + input.substring(99,102) + ':</b> Restriction Altitude [100-102] (<a href="References/5_161_Restriction_Altitude.png" target="_blank">5.161</a>)')}
+                            if (input.length >= 103) {
+                                messages.push("<b>" + input[102] + ':</b> Block Indicator [103] (<a href="References/5_203_Block_Indicator.png" target="_blank">5.203</a>)')}
+                            if (input.length >= 106) {
+                                messages.push("<b>" + input.substring(103,106) + ':</b> Restriction Altitude [104-106] (<a href="References/5_161_Restriction_Altitude.png" target="_blank">5.161</a>)')}
+                            if (input.length >= 107) {
+                                messages.push("<b>" + input[106] + ':</b> Block Indicator [107] (<a href="References/5_203_Block_Indicator.png" target="_blank">5.203</a>)')}
+                            if (input.length >= 110) {
+                                messages.push("<b>" + input.substring(108,110) + ':</b> Restriction Altitude [108-110] (<a href="References/5_161_Restriction_Altitude.png" target="_blank">5.161</a>)')}
+                            if (input.length >= 111) {
+                                messages.push("<b>" + input[110] + ':</b> Block Indicator [111] (<a href="References/5_203_Block_Indicator.png" target="_blank">5.203</a>)')}
+                            if (input.length >= 114) {
+                                messages.push("<b>" + input.substring(111,114) + ':</b> Restriction Altitude [112-114] (<a href="References/5_161_Restriction_Altitude.png" target="_blank">5.161</a>)')}
+                            if (input.length >= 115) {
+                                messages.push("<b>" + input[114] + ':</b> Block Indicator [115] (<a href="References/5_203_Block_Indicator.png" target="_blank">5.203</a>)')}
+                            if (input.length >= 118) {
+                                messages.push("<b>" + input.substring(115,118) + ':</b> Restriction Altitude [116-118] (<a href="References/5_161_Restriction_Altitude.png" target="_blank">5.161</a>)')}
+                            if (input.length >= 119) {
+                                messages.push("<b>" + input[118] + ':</b> Block Indicator [119] (<a href="References/5_203_Block_Indicator.png" target="_blank">5.203</a>)')}
                             break;
                         case 'V':
                             messages.push('<b>V:</b> Communications (EV) [6] (<a href="Tables/EV_Communications.png" target="_blank">Enroute Communications Primary Records</a>)')
