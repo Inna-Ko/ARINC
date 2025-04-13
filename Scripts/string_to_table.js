@@ -168,6 +168,36 @@ function checkCharacters(input) {
                             break;
                         case 'P':
                             messages.push('<b>P:</b> Holdings (EP) [6] (<a href="Tables/EP_Holding_Patterns.png" target="_blank">Holding Primary Records</a>)')
+                             if (input.length >= 10) {
+                                messages.push("<b>" + input.substring(6,10) + ':</b> Region Code [7-10] (<a href="References/5_41_Region_Code.png" target="_blank">5.41</a>)')}
+                             if (input.length >= 12) {
+                                messages.push("<b>" + input.substring(10,12) + ':</b> ICAO Code [11-12] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                             if (input.length >= 29) {
+                                messages.push("<b>" + input.substring(27,29) + ':</b> Duplicate Identifier [28-29] (<a href="References/5_114_Duplicate_Indicator.png" target="_blank">5.114</a>)')}
+                             if (input.length >= 34) {
+                                messages.push("<b>" + input.substring(29,34) + ':</b> Fix Identifier [30-34] (<a href="References/5_13_Fix_Identifier.png" target="_blank">5.13</a>)')}
+                             if (input.length >= 36) {
+                                messages.push("<b>" + input.substring(34,36) + ':</b> ICAO Code [35-36] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                             if (input.length >= 37) {
+                                messages.push("<b>" + input[36] + ':</b> Section Code [37] (<a href="References/5_4_Section_Code.png" target="_blank">5.4</a>)')}
+                             if (input.length >= 38) {
+                                messages.push("<b>" + input[37] + ':</b> Subsection Code [38] (<a href="References/5_5_Subsection_Code.png" target="_blank">5.5</a>)')}
+                             if (input.length >= 43) {
+                                messages.push("<b>" + input.substring(39,43) + ':</b> Inbound Holding Course [40-43] (<a href="References/5_62_Inbound_Holding_Course.png" target="_blank">5.62</a>)')}
+                             if (input.length >= 44) {
+                                messages.push("<b>" + input[43] + ':</b> Turn Direction [43] (<a href="References/5_63_Turn.png" target="_blank">5.63</a>)')}
+                             if (input.length >= 47) {
+                                messages.push("<b>" + input.substring(44,47) + ':</b> Leg Length [45-47] (<a href="References/5_64_Leg_Length.png" target="_blank">5.64, </a> <a href="References/Figure_5_10_Holding_Leg_Length.png" target="_blank">Figure 5.10 - Holding Length</a>)')}
+                             if (input.length >= 49) {
+                                messages.push("<b>" + input.substring(47,49) + ':</b> Leg Time [48-49] (<a href="References/5_65_Leg_Time.png" target="_blank">5.65, </a> <a href="References/Figure_5_10_Holding_Leg_Length.png" target="_blank">Figure 5.10 - Holding Length</a>)')}
+                             if (input.length >= 54) {
+                                messages.push("<b>" + input.substring(49,54) + ':</b> Minimum Altitude [50-54] (<a href="References/5_30_Altitude_Minimum.png" target="_blank">5.30</a>)')}
+                             if (input.length >= 59) {
+                                messages.push("<b>" + input.substring(54,59) + ':</b> Maximum Altitude [55-59] (<a href="References/5_127_Maximum_Altitude.png" target="_blank">5.127</a>)')}
+                             if (input.length >= 62) {
+                                messages.push("<b>" + input.substring(59,62) + ':</b> Holding Speed [60-62] (<a href="References/5_175_Holding_Speed.png" target="_blank">5.175</a>)')}
+                             if (input.length >= 123) {
+                                messages.push("<b>" + input.substring(98,123) + ':</b> Notes [99-123] (<a href="References/5_60_Notes.png" target="_blank">5.60</a>)')}
                             break;
                         case 'R':
                             messages.push('<b>R:</b> Enroute Airways (ER) [6] (<a href="Tables/ER_Enroute_Airways.png" target="_blank">Enroute Airways Records</a>)')
