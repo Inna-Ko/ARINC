@@ -112,6 +112,32 @@ function checkCharacters(input) {
                         switch (input[5]) {
                         case 'A':
                             messages.push('<b>A:</b> Waypoints (EA) [6] (<a href="Tables/EA_Waypoints.png" target="_blank">Waypoint Primary Records</a>)')
+                            if (input.length >= 10) {
+                                messages.push("<b>" + input.substring(6,10) + ':</b> Region Code [7-10] (<a href="References/5_41_Region_Code.png" target="_blank">5.41</a>)')}
+                            if (input.length >= 12) {
+                                messages.push("<b>" + input.substring(10,12) + ':</b> ICAO Code [11-12] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                            if (input.length >= 13) {
+                                messages.push("<b>" + input[12] + ':</b> Subsection [13] (<a href="References/5_5_Subsection_Code.png" target="_blank">5.5</a>)')}
+                            if (input.length >= 18) {
+                                messages.push("<b>" + input.substring(13,18) + ':</b> Waypoint Identifier [14-18] (<a href="References/5_13_Fix_Identifier.png" target="_blank">5.13</a>)')}
+                            if (input.length >= 21) {
+                                messages.push("<b>" + input.substring(19,21) + ':</b> ICAO Code [20-21] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                            if (input.length >= 29) {
+                                messages.push("<b>" + input.substring(26,29) + ':</b> Waypoint Type [27-29] (<a href="References/5_42_Waypoint_Type.png" target="_blank">5.42</a>)')}
+                            if (input.length >= 31) {
+                                messages.push("<b>" + input.substring(29,31) + ':</b> Waypoint Usage [30-31] (<a href="References/5_82_Waypoint_Usage.png" target="_blank">5.82</a>)')}
+                            if (input.length >= 41) {
+                                messages.push("<b>" + input.substring(32,41) + ':</b> Waypoint Latitude [33-41] (<a href="References/5_36_Latitude.png" target="_blank">5.36</a>)')}
+                            if (input.length >= 51) {
+                                messages.push("<b>" + input.substring(41,51) + ':</b> Waypoint Longitude [42-51] (<a href="References/5_37_Longitude.png" target="_blank">5.37</a>)')}
+                            if (input.length >= 79) {
+                                messages.push("<b>" + input.substring(74,79) + ':</b> Dynamic Mag. Variation [75-79] (<a href="References/5_39_Magnetic_Variation.png" target="_blank">5.39</a>)')}
+                            if (input.length >= 87) {
+                                messages.push("<b>" + input.substring(84,87) + ':</b> Datum Code [85-87] (<a href="References/5_197_Datum_Code.png" target="_blank">5.197</a>)')}
+                            if (input.length >= 98) {
+                                messages.push("<b>" + input.substring(95,98) + ':</b> Name Format Indicator [96-98] (<a href="References/5_196_Name_Format_Indicator.png" target="_blank">5.196</a>)')}
+                            if (input.length >= 123) {
+                                messages.push("<b>" + input.substring(98,123) + ':</b> Waypoint Name / Description [99-123] (<a href="References/5_43_Waypoint_Name_Description.png" target="_blank">5.43</a>)')}
                             break;
                         case 'M':
                             messages.push('<b>M:</b> Airway Markers (EM) [6] (<a href="Tables/EM_Airways.png" target="_blank">Airway Marker Primary Records</a>)')
