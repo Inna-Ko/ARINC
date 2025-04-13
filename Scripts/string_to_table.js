@@ -5,14 +5,16 @@ function checkCharacters(input) {
     switch (input[0]) {
         case 'S': // Если первый символ 'S'
             messages.push("<b>S:</b> Standard [1]")
+            if (input.length >= 4) {
+                messages.push('<b>' + input.substring(1,4) + ':</b> Area Code [2-4] (<a href="References/Figure_5_2_Geographical_Area_Codes.png" target="_blank">World Codes</a>)')}
             if (input.length >= 5) { // Проверяем 5 символ
                 switch (input[4]) {
                 case 'A':
-                    messages.push("<b>A:</b> MORA [5]")
+                    messages.push('<b>A:</b> MORA [5] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">Section and Subsection Codes</a>)')
                     if (input.length >= 6) { // Проверяем 6 символ
                         switch (input[5]) {
                         case 'S':
-                            messages.push('<b>S:</b> Grid MORA (AS) [6] (<a href="References/5_5_Subsection_Code.png" target="_blank">5.5</a>)')
+                            messages.push('<b>S:</b> Grid MORA (AS) [6] (<a href="Tables/AS_Grid_MORA.png" target="_blank">Grid MORA Primary Records</a>)')
                             if (input.length >= 16) {
                                 messages.push('<b>' + input.substring(13,16) + ':</b> Starting Latitude [14-16] (<a href="References/5_141_Starting_Latitude.png" target="_blank">5.141</a>)')}
                             if (input.length >= 20) {
@@ -31,11 +33,11 @@ function checkCharacters(input) {
                     }
                     break;
                 case 'D':
-                    messages.push("<b>5:</b> D - NAVAID")
+                    messages.push('<b>D:</b> NAVAID [5] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">Section and Subsection Codes</a>)')
                     if (input.length >= 6) { // Проверяем 6 символ
                         switch (input[5]) {
                         case ' ':
-                            messages.push("<b>6:</b> Blank - VHF NAVAID (D)")
+                            messages.push('<b>Blank:</b> VHF NAVAID (D) [6] (<a href="Tables/D__VHF_NAVAID.png" target="_blank">VHF NAVAID Primary Records</a>)')
                             if (input.length >= 10) {
                                 messages.push("<b>" + input.substring(6,10) + ':</b> Airport ICAO Identifier [7-10] (<a href="References/5_6_Airport_Heliport_Identifier.png" target="_blank">5.6</a>)')}
                             if (input.length >= 12) {
@@ -74,7 +76,29 @@ function checkCharacters(input) {
                                 messages.push("<b>" + input.substring(93,123) + ':</b> VOR Name [94-123] (<a href="References/5_71_Name_Field.png" target="_blank">5.71</a>)')}
                             break;
                         case 'B':
-                            messages.push("6 - B - NDB NAVAID (DB)")
+                            messages.push('<b>B:</b> NDB NAVAID (DB) [6] (<a href="Tables/DB_NDB_NAVAID.png" target="_blank">NDB NAVAID Primary Records</a>)')
+                            if (input.length >= 10) {
+                                messages.push("<b>" + input.substring(6,10) + ':</b> Airport ICAO Identifier [7-10] (<a href="References/5_6_Airport_Heliport_Identifier.png" target="_blank">5.6</a>)')}
+                            if (input.length >= 12) {
+                                messages.push("<b>" + input.substring(10,12) + ':</b> ICAO Code [11-12] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                            if (input.length >= 17) {
+                                messages.push("<b>" + input.substring(13,17) + ':</b> NDB Identifier [14-17] (<a href="References/5_33_VOR_NDB_Identifier.png" target="_blank">5.33</a>)')}
+                            if (input.length >= 21) {
+                                messages.push("<b>" + input.substring(19,21) + ':</b> ICAO Code [20-21] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                            if (input.length >= 27) {
+                                messages.push("<b>" + input.substring(22,27) + ':</b> NDB Frequency [23-27] (<a href="References/5_34_VOR_Frequency.png" target="_blank">5.34</a>)')}
+                            if (input.length >= 32) {
+                                messages.push("<b>" + input.substring(27,32) + ':</b> NDB Class [28-32] (<a href="References/5_35_NAVAID_Class.png" target="_blank">5.35</a>)')}
+                            if (input.length >= 41) {
+                                messages.push("<b>" + input.substring(32,41) + ':</b> NDB Latitude [33-41] (<a href="References/5_36_Latitude.png" target="_blank">5.36</a>)')}
+                            if (input.length >= 51) {
+                                messages.push("<b>" + input.substring(41,51) + ':</b> NDB Longitude [42-51] (<a href="References/5_37_Longitude.png" target="_blank">5.37</a>)')}
+                            if (input.length >= 79) {
+                                messages.push("<b>" + input.substring(74,79) + ':</b> Magnetic Variation [75-79] (<a href="References/5_39_Magnetic_Variation.png" target="_blank">5.39</a>)')}
+                            if (input.length >= 93) {
+                                messages.push("<b>" + input.substring(90,93) + ':</b> Datum Code [91-93] (<a href="References/5_197_Datum_Code.png" target="_blank">5.197</a>)')}
+                            if (input.length >= 123) {
+                                messages.push("<b>" + input.substring(93,123) + ':</b> NDB Name [94-123] (<a href="References/5_71_Name_Field.png" target="_blank">5.71</a>)')}
                             break;
                         default:
                             messages.push("6 - ???")
@@ -83,29 +107,29 @@ function checkCharacters(input) {
                     }
                     break;
                 case 'E':
-                    messages.push("5 - E - Enroute")
+                    messages.push('<b>E:</b> Enroute [5] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">Section and Subsection Codes</a>)')
                     if (input.length >= 6) { // Проверяем 6 символ
                         switch (input[5]) {
                         case 'A':
-                            messages.push("6 - A - Waypoints (EA)")
+                            messages.push('<b>A:</b> Waypoints (EA) [6] (<a href="Tables/EA_Waypoints.png" target="_blank">Waypoint Primary Records</a>)')
                             break;
                         case 'M':
-                            messages.push("6 - M - Airway Markers (EM)")
+                            messages.push('<b>M:</b> Airway Markers (EM) [6] (<a href="Tables/EM_Airways.png" target="_blank">Airway Marker Primary Records</a>)')
                             break;
                         case 'P':
-                            messages.push("6 - P - Holdings (EP)")
+                            messages.push('<b>P:</b> Holdings (EP) [6] (<a href="Tables/EP_Holding_Patterns.png" target="_blank">Holding Primary Records</a>)')
                             break;
                         case 'R':
-                            messages.push("6 - R - Enroute Airways (ER)")
+                            messages.push('<b>R:</b> Enroute Airways (ER) [6] (<a href="Tables/ER_Enroute_Airways.png" target="_blank">Enroute Airways Records</a>)')
                             break;
                         case 'T':
-                            messages.push("6 - T - Preferred Routes (ET)")
+                            messages.push('<b>T:</b> Preferred Routes (ET) [6] (<a href="Tables/ET_Preferred_Routes.png" target="_blank">Preferred Route Primary Records</a>)')
                             break;
                         case 'U':
-                            messages.push("6 - U - Airway Restrictions (EU)")
+                            messages.push('<b>U:</b> Airway Restrictions (EU) [6] (<a href="Tables/EU_Airway_Restrictions.png" target="_blank">Altitude Exclusion Primary Records</a>)')
                             break;
                         case 'V':
-                            messages.push("6 - V - Communications (EV)")
+                            messages.push('<b>V:</b> Communications (EV) [6] (<a href="Tables/EV_Communications.png" target="_blank">Enroute Communications Primary Records</a>)')
                             break;
                         default:
                             messages.push("6 - ???")
@@ -114,19 +138,103 @@ function checkCharacters(input) {
                     }
                     break;
                 case 'H':
-                    messages.push("5 - H - Heliport")
+                    messages.push('<b>H:</b> Heliport [5] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">Section and Subsection Codes</a>)')
+                    if (input.length >= 13) { // Проверяем 13 символ
+                        messages.push('<b>' + input.substring(6,10) + ':</b> Region Code or Airport ICAO Identifier [7-10]')
+                        messages.push('<b>' + input.substring(10,12) + ':</b> ICAO Code [11-12]')
+                        switch (input[12]) {
+                        case 'A':
+                            messages.push('<b>A:</b> Heliports (HA) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'C':
+                            messages.push('<b>C:</b> Terminal Waypoints (HC) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'D':
+                            messages.push('<b>D:</b> SIDs (HD) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'E':
+                            messages.push('<b>E:</b> STARs (HE) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'F':
+                            messages.push('<b>F:</b> Approach Procedures (HF) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'S':
+                            messages.push('<b>S:</b> MSA (HS) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'V':
+                            messages.push('<b>V:</b> Communications (HV) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        default:
+                            messages.push("13 - ???")
+                            break;
+                        }
+                    }
                     break;
                 case 'P':
-                    messages.push("5 - P - Airport")
+                    messages.push('<b>P:</b> Airport [5] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">Section and Subsection Codes</a>)')
+                    if (input.length >= 13) { // Проверяем 13 символ
+                        messages.push('<b>' + input.substring(6,10) + ':</b> Region Code or Airport ICAO Identifier [7-10]')
+                        messages.push('<b>' + input.substring(10,12) + ':</b> ICAO Code [11-12]')
+                        switch (input[12]) {
+                        case 'A':
+                            messages.push('<b>A:</b> Airport Records (PA) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'B':
+                            messages.push('<b>B:</b> Gates (PB) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'C':
+                            messages.push('<b>C:</b> Terminal Waypoints (PC) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'D':
+                            messages.push('<b>D:</b> SIDs (PD) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'E':
+                            messages.push('<b>E:</b> STARs (PE) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'F':
+                            messages.push('<b>F:</b> Approach Procedures (PF) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'G':
+                            messages.push('<b>G:</b> Runways (PG) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'I':
+                            messages.push('<b>I:</b> Localizer/Glide Slope (PI) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'L':
+                            messages.push('<b>L:</b> MLS (PL) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'M':
+                            messages.push('<b>M:</b> Localizer Marker (PM) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'P':
+                            messages.push('<b>P:</b> Pathpoint (PP) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'R':
+                            messages.push('<b>R:</b> Flight Planning ARR/DEP (PR) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'S':
+                            messages.push('<b>S:</b> MSA (PS) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'T':
+                            messages.push('<b>T:</b> MSA (PT) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        case 'V':
+                            messages.push('<b>V:</b> Communications (PV) [13] (<a href="References/Figure_5_1_Sec_Subsec_Codes.png" target="_blank">5.5</a>)')
+                            break;
+                        default:
+                            messages.push("13 - ???")
+                            break;
+                        }
+                    }
                     break;
                 case 'R':
-                    messages.push("5 - R - Company Routes")
+                    messages.push('<b>R:</b> Company Routes [5]')
                     break;
                 case 'T':
-                    messages.push("5 - T - Tables")
+                    messages.push('<b>T:</b> Tables [5]')
                     break;
                 case 'U':
-                    messages.push("5 - U - Airspace")
+                    messages.push('<b>U:</b> Airspace [5]')
                     break;
                 default:
                     messages.push("5 - ???")
@@ -138,7 +246,7 @@ function checkCharacters(input) {
             messages.push("1 - T - Tailored")
             break;
         default:
-            messages.push("1 - ???")
+            messages.push("1 символ не S и не T, это не строка из ARINC")
             break;
     }
 
