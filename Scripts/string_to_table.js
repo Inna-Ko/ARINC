@@ -141,6 +141,30 @@ function checkCharacters(input) {
                             break;
                         case 'M':
                             messages.push('<b>M:</b> Airway Markers (EM) [6] (<a href="Tables/EM_Airways.png" target="_blank">Airway Marker Primary Records</a>)')
+                            if (input.length >= 17) {
+                                messages.push("<b>" + input.substring(13,17) + ':</b> Marker Identifier [14-17] (<a href="References/5_110_Marker_Ident.png" target="_blank">5.110</a>)')}
+                            if (input.length >= 21) {
+                                messages.push("<b>" + input.substring(19,21) + ':</b> ICAO Code [20-21] (<a href="References/5_14_ICAO_Code.png" target="_blank">5.14</a>)')}
+                            if (input.length >= 26) {
+                                messages.push("<b>" + input.substring(22,26) + ':</b> Marker Code [23-26] (<a href="References/5_111_Marker_Code.png" target="_blank">5.111</a>)')}
+                            if (input.length >= 28) {
+                                messages.push("<b>" + input[27] + ':</b> Marker Shape [28] (<a href="References/5_112_Marker_Shape.png" target="_blank">5.112</a>)')}
+                            if (input.length >= 29) {
+                                messages.push("<b>" + input[28] + ':</b> Marker Power [29] (<a href="References/5_113_Marker_High_Low.png" target="_blank">5.113</a>)')}
+                            if (input.length >= 41) {
+                                messages.push("<b>" + input.substring(32,41) + ':</b> Marker Latitude [33-41] (<a href="References/5_36_Latitude.png" target="_blank">5.36</a>)')}
+                            if (input.length >= 51) {
+                                messages.push("<b>" + input.substring(41,51) + ':</b> Marker Longitude [42-51] (<a href="References/5_37_Longitude.png" target="_blank">5.37</a>)')}
+                            if (input.length >= 55) {
+                                messages.push("<b>" + input.substring(51,55) + ':</b> Minor Axis [52-55] (<a href="References/5_100_Minor_Axis.png" target="_blank">5.100</a>)')}
+                            if (input.length >= 79) {
+                                messages.push("<b>" + input.substring(74,79) + ':</b> Magnetic Variation [75-79] (<a href="References/5_39_Magnetic_Variation.png" target="_blank">5.39</a>)')}
+                            if (input.length >= 84) {
+                                messages.push("<b>" + input.substring(79,84) + ':</b> Facility Elevation [80-84] (<a href="References/5_92_Facility_Elevation.png" target="_blank">5.92</a>)')}
+                            if (input.length >= 87) {
+                                messages.push("<b>" + input.substring(84,87) + ':</b> Datum Code [85-87] (<a href="References/5_197_Datum_Code.png" target="_blank">5.197</a>)')}
+                            if (input.length >= 123) {
+                                messages.push("<b>" + input.substring(93,123) + ':</b> Marker Name [94-123] (<a href="References/5_71_Name_Field.png" target="_blank">5.71</a>)')}
                             break;
                         case 'P':
                             messages.push('<b>P:</b> Holdings (EP) [6] (<a href="Tables/EP_Holding_Patterns.png" target="_blank">Holding Primary Records</a>)')

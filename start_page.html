@@ -37,15 +37,17 @@ tr:nth-child(even) {
 </head>
 <body>
     <div class="container">
-        <h1>Преобразовать строку ARINC</h1>
-        <input type="text" id="input-string" placeholder="Введите строку ARINC...">
+        <h2>Преобразовать строку ARINC</h2>
+        <input type="text" id="input-string" placeholder="Добавьте строку ARINC...">
         <button onclick="convertString()">Преобразовать</button>
         <button onclick="clearInput()">Очистить</button>
         <table id="result-table"></table>
         <p id="message"></p> <!-- Блок для вывода сообщения -->
     </div>
     <script src="Scripts/string_to_table.js"></script>
+    <hr>
     <div>
+        <h2>Спецификация ARINC 424-15</h2>
         <span class="titles">S - Standard (suitable for universal application)</span>
         <div>
             <div><span class="first">1 - S - Standard</span></div>
